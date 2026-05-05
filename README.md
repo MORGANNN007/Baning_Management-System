@@ -28,12 +28,19 @@ A console-based Banking Management System developed using Java and JDBC with MyS
 
 ## Project Structure
 
+The main source files are located in:
+
+```id="z2d4ks"
+src/main/java/bank/
 ```
-bank/
-│── BankingApp.java
-│── User.java
-│── Accounts.java
-│── AccountManager.java
+
+Files:
+
+```id="k1e8o7"
+BankingApp.java
+User.java
+Accounts.java
+AccountManager.java
 ```
 
 ---
@@ -42,14 +49,14 @@ bank/
 
 ### Create Database
 
-```sql
+```sql id="a6c9lh"
 CREATE DATABASE bank;
 USE bank;
 ```
 
 ### Create User Table
 
-```sql
+```sql id="q8w1lp"
 CREATE TABLE `user` (
     user_id INT PRIMARY KEY AUTO_INCREMENT,
     full_name VARCHAR(100),
@@ -60,7 +67,7 @@ CREATE TABLE `user` (
 
 ### Create Accounts Table
 
-```sql
+```sql id="n5m2vd"
 CREATE TABLE accounts (
     account_number BIGINT PRIMARY KEY,
     full_name VARCHAR(100),
@@ -74,9 +81,9 @@ CREATE TABLE accounts (
 
 ## Configuration
 
-Update database credentials in BankingApp.java:
+Update database credentials in `BankingApp.java`:
 
-```java
+```java id="r3j9ux"
 private static final String url = "jdbc:mysql://127.0.0.1:3306/bank";
 private static final String username = "root";
 private static final String password = "your_password";
@@ -89,7 +96,7 @@ private static final String password = "your_password";
 1. Clone the repository
 2. Open the project in Eclipse or IntelliJ
 3. Add MySQL JDBC Driver or use Maven dependency
-4. Run the BankingApp.java file
+4. Run `BankingApp.java`
 
 ---
 
